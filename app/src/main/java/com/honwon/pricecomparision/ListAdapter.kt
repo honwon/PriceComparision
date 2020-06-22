@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import org.w3c.dom.Text
 
-class ListAdapter (val context: Context, val UserList: ArrayList<User>) : BaseAdapter() {
+class ListAdapter (val context: Context, val UserList: ArrayList<Data>) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
@@ -17,16 +18,20 @@ class ListAdapter (val context: Context, val UserList: ArrayList<User>) : BaseAd
 
         //리스트 소스의 각 개별 아이템 ID 등록
 
-        val Name = view.findViewById<TextView>(R.id.name_tv)
-        val Email = view.findViewById<TextView>(R.id.email_tv)
-        val Content = view.findViewById<TextView>(R.id.content_tv)
+        val Count = view.findViewById<TextView>(R.id.count)
+        val Mart = view.findViewById<TextView>(R.id.martP)
+        val Online = view.findViewById<TextView>(R.id.onlineP)
+        val subPrice = view.findViewById<TextView>(R.id.subP)
+        val percent  = view.findViewById<TextView>(R.id.returnR)
 
         val user = UserList[position]
 
         //등록
-        Name.text = user.name
-        Email.text = user.email
-        Content.text = user.content
+        Count.text = user.number
+        Mart.text = user.mart
+        Online.text = user.online
+        subPrice.text = user.diff
+        percent.text = user.percent
 
         return view
     }

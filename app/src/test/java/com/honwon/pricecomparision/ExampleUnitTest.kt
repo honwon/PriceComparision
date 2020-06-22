@@ -13,11 +13,17 @@ import java.net.URLEncoder
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        val a = ""
+        val marttt = 3000
+        val i = 5
+        val onlinee = 2400
+        val post = 2500
+        val a = "${((marttt * i) / (onlinee * i + 2500) - 1) * 100}%"
 
-        val b = URLEncoder.encode(a,"euc-kr")
-        val c = URLEncoder.encode(a,"utf-8")
-        println(b)
-        println(c)
+        println(((marttt * i) / (onlinee * i + 2500) - 1))
+        val c  = marttt*i
+        val d = onlinee*i
+        println(c/d.toFloat())
+
+        println(a)
     }
 }

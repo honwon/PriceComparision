@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -16,12 +17,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardView33"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         app:cardElevation="2dp"
         app:contentPadding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,19 +36,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="마트가" />
+                android:text="오프라인 가격"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/martPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:gravity="center_horizontal"
                 android:hint="가격을 입력하세요"
                 android:inputType="number" />
 
@@ -57,20 +60,22 @@
                 android:layout_weight="1"
                 android:freezesText="false"
                 android:gravity="center"
-                android:text="원" />
+                android:text="원"
+                android:textSize="24sp" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_marginTop="2dp"
         app:cardElevation="2dp"
         app:contentPadding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        app:layout_constraintTop_toBottomOf="@+id/cardView33">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,20 +85,23 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="온라인가" />
+                android:text="온라인 가격"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/onlinePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:gravity="center_horizontal"
                 android:hint="가격을 입력하세요"
+                android:imeOptions="actionDone"
                 android:inputType="number" />
 
             <TextView
@@ -102,14 +110,15 @@
                 android:layout_weight="1"
                 android:freezesText="false"
                 android:gravity="center"
-                android:text="원" />
+                android:text="원"
+                android:textSize="24sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_marginTop="2dp"
         app:cardElevation="2dp"
         app:contentPadding="8dp"
@@ -125,22 +134,25 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:maxLines="2"
-                android:text="온라인가\n가격 조회" />
+                android:text="온라인 가격\n검색"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/productName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="41dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:gravity="center_horizontal"
                 android:hint="제품명을 입력하세요"
+                android:imeOptions="actionDone"
                 android:inputType="textPersonName" />
 
             <Button
@@ -150,6 +162,54 @@
                 android:layout_weight="1"
                 android:text="검색" />
 
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        app:cardElevation="2dp"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="배송비"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/postSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:text="2500" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:freezesText="false"
+                android:gravity="center"
+                android:text="원"
+                android:textSize="24sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

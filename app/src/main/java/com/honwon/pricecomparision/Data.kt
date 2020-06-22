@@ -1,3 +1,3 @@
 package com.honwon.pricecomparision
 
-class User (val name: String, val email: String, val content: String)
+class Data (val number :String ,val mart: String, val online: String, val diff: String, val percent: String)
