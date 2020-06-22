@@ -3,6 +3,7 @@ package com.honwon.pricecomparision
 import org.junit.Test
 
 import org.junit.Assert.*
+import java.net.URLEncoder
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,6 +13,11 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        val a = ""
+
+        val b = URLEncoder.encode(a,"euc-kr")
+        val c = URLEncoder.encode(a,"utf-8")
+        println(b)
+        println(c)
     }
 }
