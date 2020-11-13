@@ -10,8 +10,8 @@ android {
         applicationId "com.honwon.pricecomparision"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 3
-        versionName "20200719"
+        versionCode 4
+        versionName "20201113 Name change"
         multiDexEnabled true
 
 
